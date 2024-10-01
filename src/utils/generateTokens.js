@@ -1,6 +1,6 @@
 const  jwt  =  require("jsonwebtoken");
 
-const secretKey = process.env.JWT_SECRET || "defaultSecretKey"; // Make sure to set this in your environment variables
+const secretKey = process.env.JWT_SECRET || "defaultSecretKey";
 
 const generateToken = ( userData) => {
   const payload = {userData };
