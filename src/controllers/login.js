@@ -1,4 +1,5 @@
 const { userData } = require("../models/userModel");
+const genToken = require("../utils/generateTokens")
 
 exports.userLogin = async (req, res) => {
   try {
@@ -11,6 +12,7 @@ exports.userLogin = async (req, res) => {
     if (user) {
       res.status(200).json({
         message: "User logged in successfully",
+        access: true,
       });
     }
   } catch (err) {
